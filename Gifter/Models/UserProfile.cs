@@ -16,7 +16,12 @@ public class UserProfile
 
     public string ImageUrl { get; set; }
 
+    [StringLength(500)]
+    public string Bio { get; set; }
+
     [Required]
     public DateTime DateCreated { get; set; }
+
+    public List<Post>? Posts { get; set; }
 
 }
