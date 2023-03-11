@@ -24,6 +24,6 @@ public class Post
 
     public UserProfile? UserProfile { get; set; }
 
-    public List<Comment>? Comments { get; set; }
+    public List<Comment> Comments { get; set; }
 
 }

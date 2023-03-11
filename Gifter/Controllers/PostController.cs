@@ -39,6 +39,17 @@ public class PostController : ControllerBase
         return Ok(post);
     }
 
+    [HttpGet("GetWithComments/{id}")]
+    public IActionResult GetPostByIdWithComments(int id)
+    {
+        var post = _postRepository.GetPostByIdWithComments(id);
+        if (post == null)
+        {
+            return NotFound();
+        }
+        return Ok(post);
+    }
+
     [HttpPost]
     public IActionResult Post(Post post)
     {
